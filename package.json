@@ -1,14 +1,23 @@
 {
   "name": "express_serving_client_files",
   "version": "1.0.0",
-  "description": "",
+  "description": "You'll remember that a server will sometimes need to send HTML as a response body, instead of JSON. We do this to serve client files to the browser. Express has a built-in way of serving static files.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jake Johnson",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
-  }
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakerjohnson94/frontend-assessment-full-app-in-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakerjohnson94/frontend-assessment-full-app-in-express/issues"
+  },
+  "homepage": "https://github.com/jakerjohnson94/frontend-assessment-full-app-in-express#readme"
 }

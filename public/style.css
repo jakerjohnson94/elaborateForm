@@ -1,0 +1,18 @@
+body {
+  padding: 0.6em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  height: 5em;
+}
+label {
+  padding-bottom: 2em;
+}
+
+input {
+  height: 2em;
+}

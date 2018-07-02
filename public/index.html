@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create User</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+
+
+
 </head>
+
 <body>
+
     <form id="user-create-form" action="./api/user" method="post">
-        
-        <!-- Add user input fields here -->
+
+        <label for="placeholder"></label>
+        <input type="email" name="email" id="email">
+        <label for="email">Email</label>
+        <input type="text" id="username">
+        <label for="username">Username</label>
+
+        <input type="password" name="password" id="password">
+        <label for="password">Password</label>
+
+        <input type="text" name="name" id="name">
+        <label for="name">Full Name</label>
 
         <button type="submit">Create User</button>
     </form>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
+
 </html>
