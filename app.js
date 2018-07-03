@@ -8,7 +8,9 @@ app.use(express.json());
 app.use(express.static(publicFolderPath));
 
 const users = [];
-
+app.get('/api/user', (req, res) => {
+  res.send(req.body)
+})
 app.post('/api/user', (req, res) => {
   console.log(req.body.username);
   const foundUser = users.find(user => user.username === req.body.username);

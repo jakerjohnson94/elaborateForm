@@ -1,8 +1,5 @@
-var slider = document.getElementById("yearSlider");
-var output = document.getElementById("rangeOut");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-    output.innerHTML = this.value;
-}
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var options = document.querySelectorAll('option');
+  var instances = M.FormSelect.init(elems, options);
+});

@@ -16,7 +16,6 @@ let user;
 function getCheckboxes(array) {
   array = [...array];
   const checkboxArray = [];
-
   array.forEach(element => {
     if (element.checked === true || element.selected === true) checkboxArray.push(element.value);
   });
