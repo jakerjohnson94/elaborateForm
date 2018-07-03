@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create User</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
 
 
@@ -16,24 +17,128 @@
 
 <body>
 
-    <form id="user-create-form" action="./api/user" method="post">
+    <form class="form-group" id="userForm" action="./api/user" method="post">
+        <h1>User Form</h1>
+        <div class="section">
+            <div class="input-field col s6">
+                <input id="firstName" type="text" name="firstName" autofocus="autofocus" />
+                <label for="firstName">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="lastName" type="text" name="lastName" />
+                <label for="firstName">Last Name</label>
+            </div>
+        </div>
 
-        <label for="placeholder"></label>
-        <input type="email" name="email" id="email">
-        <label for="email">Email</label>
-        <input type="text" id="username">
-        <label for="username">Username</label>
+        <div class="input-field col s12">
+            <input id="username" type="text" name="username" />
+            <label for="username">username</label>
+        </div>
 
-        <input type="password" name="password" id="password">
-        <label for="password">Password</label>
 
-        <input type="text" name="name" id="name">
-        <label for="name">Full Name</label>
+        <div class="input-field col s12">
+            <input id="email" type="email" name="email" />
+            <label for="email">Email</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="password" type="text" name="password" />
+            <label for="password">username</label>
+        </div>
 
-        <button type="submit">Create User</button>
+        <div class="input-field col s12">
+            <input id="tel" type="tel" name="tel" />
+            <label for="tel">Telephone</label>
+        </div>
+        </div>
+
+        <div class="input-field col s12">
+            <input class="validate" id="homepage" type="url" name="homepage" />
+            <label for="homepage">Homepage or Social Media Link</label>
+        </div>
+        </div>
+        <div class="section">
+            <div class=" col s1"></div>
+
+            <fieldset class="input-field col s5">
+                <legend>Preffered Communication Method</legend>
+                <p>
+                    <input id="com-1" type="radio" class="com" name="com" value="Email" />
+                    <label for="com-1">Email</label>
+                </p>
+                <p>
+                    <input id="com-2" type="radio" class="com" name="com" value="SMS Text" />
+                    <label for="com-2">SMS Text</label>
+                </p>
+                <p>
+                    <input id="com-3" type="radio" class="com" name="com" value="Social Media" />
+                    <label for="com-3">Social Media</label>
+                </p>
+            </fieldset>
+
+
+            <fieldset class="col s5">
+                <legend>Platforms Used</legend>
+                <p>
+                    <input id="device-1" type="checkbox" class="device" name="device" value="Mac" />
+                    <label for="device-1">Mac</label>
+                </p>
+                <p>
+                    <input id="device-2" type="checkbox" class="device" name="device" value="Mac" />
+                    <label for="device-2">Windows</label>
+                </p>
+                <p>
+                    <input id="device-3" type="checkbox" class="device" name="device" value="Linux" />
+                    <label for="device-3">Linux</label>
+                </p>
+                <p>
+                    <input id="device-4" type="checkbox" class="device" name="device" value="iOS" />
+                    <label for="device-4">iOS</label>
+                </p>
+                <p>
+                    <input id="device-5" type="checkbox" class="device" name="device" value="Android" />
+                    <label for="device-5">Android</label>
+                </p>
+            </fieldset>
+        </div>
+
+
+        <div class="section">
+            <div class="input-field col s12">
+                <select class="select" id='select' multiple>
+                    <option class="option" value="" disabled="disabled">Select an option</option>
+                    <option class="option" value="User">User</option>
+                    <option class="option" value="Moderator">Moderator</option>
+                    <option class="option" value="Admin">Administrator</option>
+
+                </select>
+                <br>
+                <label for='select'>Type Of User</label>
+            </div>
+
+            <div class="section">
+                <div class="input-field col s12">
+                    <div id="rangeOut">
+
+                    </div>
+                    <input type="range" name="yearSlider" id="yearSlider" min="0" max="30" value="0">
+                    <label for="test-slider">Years of Experience</label>
+                </div>
+            </div>
+
+            <div class="section">
+                <button class="btn btn-large col s12" type="submit">Create User </button>
+            </div>
+
+
+            <div class="section">
+                <button class="btn btn-large col s12" id="reset" type="reset">Reset</button>
+
+            </div>
     </form>
     <script src="index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="widgets.js"></script>
+
+    </script>
 </body>
 
 </html>

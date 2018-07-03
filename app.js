@@ -9,27 +9,17 @@ app.use(express.static(publicFolderPath));
 
 const users = [];
 
-// app.get('./api/user', (req, res) => {
-//   res.status(200);
-
-//   res.send(users);
-// });
-
 app.post('/api/user', (req, res) => {
-  const isDuplicateUsername = false;
-  const currentUsername = req.body.username;
-  console.log();
-  users.forEach(user => {
-    if (user.username === req.body.username) isDuplicateUsername = true;
-  });
-  if (isDuplicateUsername === false) {
+  console.log(req.body.username);
+  const foundUser = users.find(user => user.username === req.body.username);
+  if (!foundUser) {
     res.status(201);
     req.body.id = Math.floor(Math.random() * 100000);
     users.push(req.body);
     res.send(users);
   } else {
     res.status(409);
-    throw new Error('username already taken');
+    res.send({ message: 'duplicate usernames' });
   }
 });
 
