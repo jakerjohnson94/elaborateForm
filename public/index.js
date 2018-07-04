@@ -1,26 +1,28 @@
-const userCreateForm = document.getElementById('userForm');
-const userCreateSubmitButton = userCreateForm.querySelector("button[type='submit']");
-const userCreateEmail = userCreateForm.querySelector('#email');
-const userCreateUsername = userCreateForm.querySelector('#username');
-const userCreatePassword = userCreateForm.querySelector('#password');
-const userCreateFirstName = userCreateForm.querySelector('#firstName');
-const userCreateLastName = userCreateForm.querySelector('#lastName');
-const userCreateHomepage = userCreateForm.querySelector('#homepage');
-const userCreateTel = userCreateForm.querySelector('#tel');
-const userCreateCommunicationMethod = userCreateForm.querySelector('.com');
-let userCreateDevices = userCreateForm.querySelectorAll('.device');
-let userCreateUserType = userCreateForm.querySelectorAll('.option');
-const userCreateExperience = userCreateForm.querySelector('#yearSlider');
+const userForm = document.getElementById('userForm');
+const userSubmitButton = userForm.querySelector("button[type='submit']");
+const userEmail = userForm.querySelector('#email');
+const userUsername = userForm.querySelector('#username');
+const userPassword = userForm.querySelector('#password');
+const userFirstName = userForm.querySelector('#firstName');
+const userLastName = userForm.querySelector('#lastName');
+const userHomepage = userForm.querySelector('#homepage');
+const userTel = userForm.querySelector('#tel');
+const userCommunicationMethod = userForm.querySelector('.com');
+let userDevices = userForm.querySelectorAll('.device');
+let userType = userForm.querySelectorAll('.option');
+const userExperience = userForm.querySelector('#slider');
 
 let user;
+
 function getCheckboxes(array) {
-  array = [...array];
   const checkboxArray = [];
+  array = [...array];
   array.forEach(element => {
     if (element.checked === true || element.selected === true) checkboxArray.push(element.value);
   });
   return checkboxArray;
 }
+
 function User(
   email,
   username,
@@ -51,17 +53,17 @@ const clickEvent = function(event) {
   event.preventDefault();
 
   user = new User(
-    userCreateEmail.value,
-    userCreateUsername.value,
-    userCreatePassword.value,
-    userCreateFirstName.value,
-    userCreateLastName.value,
-    userCreateHomepage.value,
-    userCreateTel.value,
-    userCreateCommunicationMethod.value,
-    getCheckboxes(userCreateDevices),
-    getCheckboxes(userCreateUserType),
-    userCreateExperience.value
+    userEmail.value,
+    userUsername.value,
+    userPassword.value,
+    userFirstName.value,
+    userLastName.value,
+    userHomepage.value,
+    userTel.value,
+    userCommunicationMethod.value,
+    getCheckboxes(userDevices),
+    getCheckboxes(userType),
+    userExperience.value
   );
   console.log(user);
 
@@ -83,4 +85,4 @@ const clickEvent = function(event) {
     .catch(error => console.error('Error:', error.message));
 };
 
-userCreateSubmitButton.addEventListener('click', clickEvent);
+userSubmitButton.addEventListener('click', clickEvent);

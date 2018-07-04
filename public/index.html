@@ -16,152 +16,155 @@
 </head>
 
 <body>
-
-    <form id="userForm" action="/api/user" method="post">
-        <h1>User Form</h1>
+    <div class='container'>
         <div class="row">
-            <div class="input-field col s6">
-                <input id="firstName" type="text" name="firstName" autofocus />
-                <label for="firstName">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="lastName" type="text" name="lastName" />
-                <label for="firstName">Last Name</label>
-            </div>
-        </div>
-
-        <div class="input-field col s12">
-            <input id="username" type="text" name="username" />
-            <label for="username">username</label>
-        </div>
 
 
-        <div class="input-field col s12">
-            <input id="email" type="email" name="email" />
-            <label for="email">Email</label>
-        </div>
-        <div class="input-field col s12">
-            <input id="password" type="text" name="password" />
-            <label for="password">Username</label>
-        </div>
-
-        <div class="input-field col s12">
-            <input id="tel" type="tel" name="tel" />
-            <label for="tel">Telephone</label>
-        </div>
-
-
-        <div class="input-field col s12">
-            <input class="validate" id="homepage" type="url" name="homepage" />
-            <label for="homepage">Homepage or Social Media Link</label>
-        </div>
-
-        <div>
-
-
-            <fieldset>
-                <legend>Preffered Communication Method</legend>
-                <p>
-                    <label>
-                        <input name="group1" type="radio" class="com" value="Email" />
-                        <span>Email</span>
-                    </label>
-                </p>
-
-                <p>
-                    <label>
-                        <input name="group1" type="radio" class="com" value="SMS Text" checked />
-                        <span>SMS Text</span>
-                    </label>
-                </p>
-
-                <p>
-                    <label>
-                        <input name="group1" type="radio" class="com" value="Social Media" checked />
-                        <span>Social Media</span>
-                    </label>
-                </p>
-            </fieldset>
-
-
-            <fieldset class="col s5">
-
-
-                <legend>Platforms Used</legend>
-                <p>
-                    <label for="device-1">
-                        <input id="device-1" type="checkbox" class="device" name="device" value="Mac" />
-                        <span> Mac </span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input id="device-2" type="checkbox" class="device" name="device" value="Windows" />
-                        <span>Windows</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input id="device-3" type="checkbox" class="device" name="device" value="Linux" />
-                        <span>Linux </span>
-                    </label>
-                </p>
-                <p>
-                    <label for="device-4">
-                        <input id="device-4" type="checkbox" class="device" name="device" value="iOS" />
-                        <span> iOS </span>
-                    </label>
-                </p>
-                <p>
-                    <label for="device-5">
-                        <input id="device-5" type="checkbox" class="device" name="device" value="Android" />
-                        <span> Android </span>
-                    </label>
-                </p>
-        </div>
-        </fieldset>
-        </div>
-
-
-        <div class="row">
-            <div class="input-field col s12">
-                <select class="select" id='select' multiple>
-                    <option class="option" value="" disabled="disabled">Type of User</option>
-                    <option class="option" value="User">User</option>
-                    <option class="option" value="Moderator">Moderator</option>
-                    <option class="option" value="Admin">Administrator</option>
-
-                </select>
-                <br>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <div id="rangeOut">
-
+            <form id="userForm" class='col s12' action="/api/user" method="post">
+                <h1>User Form</h1>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="firstName" type="text" name="firstName" autofocus />
+                        <label for="firstName">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="lastName" type="text" name="lastName" />
+                        <label for="firstName">Last Name</label>
+                    </div>
                 </div>
 
-                <input type="range" name="yearSlider" id="yearSlider" min="0" max="30" value="0" />
+                <div class="input-field col s12">
+                    <input id="username" type="text" name="username" />
+                    <label for="username">Username</label>
+                </div>
 
-                <span>Years of Experience </span>
 
-                </label>
-            </div>
+                <div class="input-field col s12">
+                    <input id="email" type="email" name="email" />
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="password" type="text" name="password" />
+                    <label for="password">Username</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input id="tel" type="tel" name="tel" />
+                    <label for="tel">Telephone</label>
+                </div>
+
+
+                <div class="input-field col s12">
+                    <input class="validate" id="homepage" type="url" name="homepage" />
+                    <label for="homepage">Homepage or Social Media Link</label>
+                </div>
+
+
+                <div>
+                    <fieldset>
+                        <legend>Preffered Communication Method</legend>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" class="com" value="Email" />
+                                <span>Email</span>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" class="com" value="SMS Text" checked />
+                                <span>SMS Text</span>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" class="com" value="Social Media" checked />
+                                <span>Social Media</span>
+                            </label>
+                        </p>
+                    </fieldset>
+
+
+                    <fieldset>
+
+
+                        <legend>Platforms Used</legend>
+                        <p>
+                            <label for="device-1">
+                                <input id="device-1" type="checkbox" class="device" name="device" value="Mac" />
+                                <span> Mac </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="device-2" type="checkbox" class="device" name="device" value="Windows" />
+                                <span>Windows</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="device-3" type="checkbox" class="device" name="device" value="Linux" />
+                                <span>Linux </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="device-4">
+                                <input id="device-4" type="checkbox" class="device" name="device" value="iOS" />
+                                <span> iOS </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="device-5">
+                                <input id="device-5" type="checkbox" class="device" name="device" value="Android" />
+                                <span> Android </span>
+                            </label>
+                        </p>
+                </div>
+                </fieldset>
+
+
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select class="select" id='select' multiple>
+                            <option class="option" value="" disabled="disabled">Type of User</option>
+                            <option class="option" value="User">User</option>
+                            <option class="option" value="Moderator">Moderator</option>
+                            <option class="option" value="Admin">Administrator</option>
+
+                        </select>
+                        <br>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div id="rangeOut">
+
+                        </div>
+
+                        <input type="range" name="slider" id="slider" min="0" max="30" value="0" />
+
+                        <span>Years of Experience </span>
+
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <button class="btn btn-large col s12" type="submit">Create User </button>
+                </div>
+
+
+                <div class="row">
+                    <button class="btn btn-large col s12" id="reset" type="reset">Reset</button>
+
+                </div>
+            </form>
         </div>
-
-
-        <div class="row">
-            <button class="btn btn-large col s12" type="submit">Create User </button>
-        </div>
-
-
-        <div class="row">
-            <button class="btn btn-large col s12" id="reset" type="reset">Reset</button>
-
-        </div>
-    </form>
-
+    </div>
 
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
